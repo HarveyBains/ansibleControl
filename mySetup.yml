@@ -4,6 +4,12 @@
   become_user:  root
 
   tasks:
-  - name:  my instins 
+  - name:  My program installs 
     apt:
       name:  tree
+
+
+  - name: Copy aliases file to client
+    copy:
+      src: .bash_aliases
+      dest: .bash_aliases
